@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Group - Home</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        
+        /* Hero section */
+        .hero {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('../V1/assets/media/header-bg.jpg.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 2.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Content sections */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .welcome-note {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .positions-grid, .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .position-card, .publication-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .position-card:hover, .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        
+        .position-card h3, .publication-card h3 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        
+        .position-card p, .publication-card p {
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+        }
+        
+        .position-card .deadline {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Research Group</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div>
+            <h1>Advancing Research Frontiers</h1>
+            <p>Exploring innovative solutions to complex problems through interdisciplinary collaboration</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section class="section welcome-note">
+            <h2>Welcome to Our Research Group</h2>
+            <p>We are a dynamic team of researchers dedicated to pushing the boundaries of knowledge in our field. Our work focuses on developing novel approaches to solve real-world problems through rigorous scientific inquiry and innovative thinking.</p>
+            <p>Our group fosters a collaborative environment where students, postdocs, and faculty work together to advance understanding and create impactful solutions.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Open Positions</h2>
+            <div class="positions-grid">
+                <div class="position-card" onclick="window.location.href='position1.html'">
+                    <h3>Postdoctoral Researcher</h3>
+                    <p>Join our team to work on cutting-edge projects in computational modeling.</p>
+                    <p class="deadline">Application deadline: June 15, 2023</p>
+                </div>
+                <div class="position-card" onclick="window.location.href='position2.html'">
+                    <h3>PhD Student</h3>
+                    <p>Opportunity to research machine learning applications in material science.</p>
+                    <p class="deadline">Application deadline: January 10, 2024</p>
+                </div>
+                <div class="position-card" onclick="window.location.href='position3.html'">
+                    <h3>Research Assistant</h3>
+                    <p>Support ongoing projects with data collection and analysis.</p>
+                    <p class="deadline">Open until filled</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Recent Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-card" onclick="window.location.href='pub1.html'">
+                    <h3>Novel Approaches to Quantum Computing</h3>
+                    <p>Nature Physics, 2023</p>
+                    <p>Authors: Smith J., Doe A., et al.</p>
+                </div>
+                <div class="publication-card" onclick="window.location.href='pub2.html'">
+                    <h3>Machine Learning for Climate Modeling</h3>
+                    <p>Science Advances, 2023</p>
+                    <p>Authors: Johnson B., Lee C., et al.</p>
+                </div>
+                <div class="publication-card" onclick="window.location.href='pub3.html'">
+                    <h3>Biomaterials for Neural Interfaces</h3>
+                    <p>Advanced Materials, 2022</p>
+                    <p>Authors: Chen L., Wilson M., et al.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Research Group. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Simple script for handling clicks on cards
+        document.addEventListener('DOMContentLoaded', function() {
+            // If content page doesn't exist, redirect to dummy page
+            const cards = document.querySelectorAll('.position-card, .publication-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const target = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    // In a real implementation, you might check if the page exists first
+                    window.location.href = target;
+                });
+            });
+            
+            // Animate hero text
+            const heroText = document.querySelector('.hero h1');
+            heroText.style.opacity = '0';
+            heroText.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                heroText.style.opacity = '1';
+                heroText.style.transform = 'translateY(0)';
+                heroText.style.transition = 'opacity 1s, transform 1s';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
