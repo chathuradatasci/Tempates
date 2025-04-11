@@ -1,0 +1,236 @@
+/* CSS Variables */
+:root {
+    --primary: #0056b3;
+    --secondary: #343a40;
+    --accent: #495057;
+    --light-bg: #f8f9fa;
+    --dark-bg: #e9ecef;
+    --border: #dee2e6;
+    --text: #343a40;
+    --text-light: #6c757d;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+.header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* PI Spotlight Section */
+.pi-spotlight {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.pi-spotlight img {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.pi-info h1 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.pi-info h2 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.pi-info p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pi-links a {
+    margin-right: 1rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pi-links a:hover {
+    text-decoration: underline;
+}
+
+/* Collapsible Panels */
+.collapsible-panel {
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.panel-header {
+    background-color: var(--dark-bg);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.panel-header h3 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+
+.panel-header .toggle-icon {
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.panel-header.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.panel-content {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.panel-content.active {
+    max-height: 2000px;
+    padding: 1.5rem;
+}
+
+/* Member List */
+.member-list {
+    list-style: none;
+    padding: 0;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f1f3f5;
+    cursor: pointer;
+}
+
+.member-item:last-child {
+    border-bottom: none;
+}
+
+.member-item:hover {
+    background-color: var(--light-bg);
+}
+
+.member-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+.member-info span {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
